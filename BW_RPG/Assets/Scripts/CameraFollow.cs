@@ -4,7 +4,6 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour {
 
     public Transform target;
-    public float m_speed = 0.03f;
     Camera mycam;
 
 	// Use this for initialization
@@ -17,11 +16,11 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        mycam.orthographicSize = (Screen.height / 100f) / 3f;
+        mycam.orthographicSize = (Screen.height / 100f) / 2.7f;
 
         if (target)
         {
-            transform.position = Vector3.Lerp(transform.position, target.position, m_speed) + new Vector3(0, 0, -10);
+            transform.position = Vector3.Lerp(transform.position, target.position, 0.1f) + new Vector3(0, 0, -10);
         }
 	}
 }
