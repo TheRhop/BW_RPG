@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour {
 
     Rigidbody2D rbody;
     Animator anim;
-    public float s_mult = 2.0f;
 
     // Use this for initialization
     void Start()
@@ -33,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
             anim.SetBool("isWalking", false);
         }
 
-        rbody.MovePosition(rbody.position + movement_vector * s_mult * Time.deltaTime);
+        rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime);
 
     }
 }
