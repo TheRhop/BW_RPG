@@ -377,3 +377,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2076158733}
+  m_speed: 0.1
+  c_scale: 2.2
