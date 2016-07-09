@@ -4,7 +4,8 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour {
 
     public Transform target;
-    public float m_speed = 0.03f;
+    public float m_speed = 0.1f;
+    public float c_scale = 2.2f;
     Camera mycam;
 
 	// Use this for initialization
@@ -17,7 +18,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        mycam.orthographicSize = (Screen.height / 100f) / 3f;
+        mycam.orthographicSize = (Screen.height / 100f) / c_scale;
 
         if (target)
         {
